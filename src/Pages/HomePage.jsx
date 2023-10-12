@@ -47,7 +47,7 @@ const HomePage = () => {
                     <h5 className="text-3xl text-[#00A65E] font-bold ">
                         {props.title}
                     </h5>
-                    <p className=" text-xl pt-2 font-semibold ">
+                    <p className=" text-xl md:text-2xl pt-2 font-semibold ">
                         {props.description}
                     </p>
                 </div>
@@ -293,7 +293,7 @@ const HomePage = () => {
 
 
 
-                    <div id="contactus" className="pb-36">
+                    <div id="contactus" className="pb-28">
 
                         <ContactUs />
                     </div>
