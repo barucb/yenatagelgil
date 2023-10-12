@@ -137,7 +137,6 @@ const HomePage = () => {
                 <div className="container mx-auto">
                     <h2 className="text-3xl md:text-5xl font-semibold text-center mb-5">Get in Touch</h2>
                     <div className="flex flex-col md:flex-row md:space-x-6">
-
                         <div className="w-full  flex justify-center md:mt-6 ">
                             <div className="bg-[#FFA500] px-5 py-12  text-2xl sm:px-12 sm:text-3xl rounded-lg shadow-md">
                                 <div className="flex mb-4 items-center">
