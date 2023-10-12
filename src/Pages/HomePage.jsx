@@ -77,7 +77,7 @@ const HomePage = () => {
 
         return (
             <>
-                <div className="fixed font-playfair  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-28 md:flex  ">
+                <div className="fixed font-playfair  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-20 md:h-28 md:flex  ">
                     <div className=" py-0 bg-black  md:py-0 md:px-1 ">
                         <p className="text-[#FFA500] xl:ml-60 font-playfair  sm:pt-5 pt-12  hover:font-serif text-3xl ml-5 md:text-4xl ">
                             <a href="/" >
