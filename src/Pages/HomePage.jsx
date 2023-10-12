@@ -28,7 +28,7 @@ const HomePage = () => {
                 <h1 className="md:text-3xl text-xl text-center "> {props.description}</h1>
                 <div className="flex justify-center">
 
-                    <button className="p-3 my-5  rounded-3xl text-white  text-2xl  font-semibold  bg-red-600  ">Order Now</button>
+                    <a href="https://t.me/agelgelfoods" className="p-3 my-5  rounded-3xl text-white  text-2xl  font-semibold  bg-red-600  ">Order Now</a>
                 </div>
             </div>
 
@@ -201,14 +201,14 @@ const HomePage = () => {
                         </p>
                         <div className="align-center justify-center flex mt-5">
 
-                            <button className="p-5 mb-8  duration-500 ease-in-out  rounded-3xl text-white  text-3xl  font-semibold  bg-red-600  ">
+                            <a href="https://t.me/agelgelfoods" className="p-5 mb-8  duration-500 ease-in-out  rounded-3xl text-white  text-3xl  font-semibold  bg-red-600  ">
                                 Order Now
-                            </button>
+                            </a>
                         </div>
                     </div>
 
                     <div >
-                        <img src={img1} className="xl:pr-10  w-fit h-full lg:mt-0" alt="yinebeb character" />
+                        <img src={img1} className="xl:pr-10  w-screen h-full lg:mt-0" alt="yinebeb character" />
 
                     </div>
 
