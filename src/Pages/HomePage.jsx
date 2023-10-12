@@ -133,7 +133,7 @@ const HomePage = () => {
 
     const ContactUs = () => {
         return (
-            <div className="bg-gray-200 font-playfair font-semibold mt-28 md:mt-56 py-10">
+            <div id="contactus" className="bg-gray-200 font-playfair font-semibold mt-28 md:mt-56 py-10">
                 <div className="container mx-auto">
                     <h2 className="text-3xl md:text-5xl font-semibold text-center mb-5">Get in Touch</h2>
                     <div className="flex flex-col md:flex-row md:space-x-6">
@@ -293,7 +293,7 @@ const HomePage = () => {
 
 
 
-                    <div id="contactus" className="pb-28">
+                    <div className="pb-28">
 
                         <ContactUs />
                     </div>
