@@ -47,7 +47,7 @@ const HomePage = () => {
                     <h5 className="text-3xl text-[#00A65E] font-bold ">
                         {props.title}
                     </h5>
-                    <p className=" text-2xl pt-2 font-semibold ">
+                    <p className=" text-xl pt-2 font-semibold ">
                         {props.description}
                     </p>
                 </div>
