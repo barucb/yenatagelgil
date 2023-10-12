@@ -77,9 +77,9 @@ const HomePage = () => {
 
         return (
             <>
-                <div className="fixed font-playfair  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-20 md:h-28 md:flex  ">
+                <div className="fixed font-playfair  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-16 md:h-28 md:flex  ">
                     <div className=" py-0 bg-black  md:py-0 md:px-1 ">
-                        <p className="text-[#FFA500] xl:ml-60 font-playfair  sm:pt-5 pt-12  hover:font-serif text-3xl ml-5 md:text-4xl ">
+                        <p className="text-[#FFA500] xl:ml-60 font-playfair  sm:pt-5 pt-4  hover:font-serif text-3xl ml-5 md:text-4xl ">
                             <a href="/" >
                                 ENAT AGELGIL
                             </a>
@@ -96,7 +96,7 @@ const HomePage = () => {
                             }}
                             className="sm:hidden"
                         >
-                            {openNavMenu ? <TfiClose className="absolute text-2xl  cursor-pointer right-5 top-12 sm:hidden" /> : <GiHamburgerMenu className="absolute text-3xl cursor-pointer right-5 top-12 lg:hidden" />}
+                            {openNavMenu ? <TfiClose className="absolute text-2xl  cursor-pointer right-5 top-5 sm:hidden" /> : <GiHamburgerMenu className="absolute text-3xl cursor-pointer right-5 top-5 lg:hidden" />}
                         </button>
                         <ul className={`sm:flex sm:items-center xl:mr-48 pt-5 bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-9 transition-all duration-200 ease-in ${openNavMenu ? "top-20" : "top-[-300px]"} `}>
 
