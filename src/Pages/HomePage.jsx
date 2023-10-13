@@ -47,7 +47,7 @@ const HomePage = () => {
 
     const Features = (props) => {
         return (
-            <div className="flex my-3">
+            <div className="flex my-3 px-3 py-5">
                 <div className="flex-shrink-0">
                     <div className="flex items-center justify-center p-1  bg-[#FFA500] rounded-md">
                         {props.icon}
@@ -87,7 +87,7 @@ const HomePage = () => {
 
         return (
             <>
-                <div className="fixed font-playfair  pb-5  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-16 md:h-28 md:flex  ">
+                <div ref={menuClick} className="fixed font-playfair  pb-5  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-16 md:h-28 md:flex  ">
                     <div className=" pt-3 md:pt-5 sm:pt-7 bg-black   md:py-0 md:px-1 ">
                         <p className="text-[#FFA500] xl:ml-60 font-playfair   mb-5   hover:font-serif text-2xl ml-5  ">
                             <a href="/" >
@@ -99,7 +99,7 @@ const HomePage = () => {
 
                     <div className="">
                         <button
-                            ref={menuClick}
+
                             onClick={(event) => {
                                 event.stopPropagation();
                                 setOpenNavMenu(!openNavMenu);
@@ -110,23 +110,23 @@ const HomePage = () => {
                         </button>
                         <ul className={`sm:flex text-2xl sm:text-xl md:text-2xl sm:items-center xl:mr-48  bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-7 transition-all duration-200 ease-in ${openNavMenu ? "top-16" : "top-[-300px]"} `}>
 
-                            <li className=" md:mx-2     ">
-                                <a href="/" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
+                            <li className=" md:mx-2 pt-5    ">
+                                <a href="#home" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1] hover:text-[#FFA500] " >
                                     Home
                                 </a>
                             </li>
                             <li className=" md:mx-2     ">
-                                <a href="#services" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
+                                <a href="#services" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Services
                                 </a>
                             </li>
                             <li className=" md:mx-2    ">
-                                <a href="#aboutus" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
+                                <a href="#aboutus" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     About Us
                                 </a>
                             </li>
                             <li className=" md:mx-2    ">
-                                <a href="#contactus" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
+                                <a href="#contactus" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Contact Us
                                 </a>
                             </li>
@@ -134,7 +134,7 @@ const HomePage = () => {
 
                         </ul>
                     </div>
-                </div>
+                </div >
 
             </>
         );
@@ -188,131 +188,134 @@ const HomePage = () => {
 
 
         <>
-            <Header />
-            <div id="main" className="relative font-playfair mt-36  ">
-                {/*hero section */}      <div className='lg:flex'>
+            <div id="home" >
 
-                    <div className="md:mx-20 mx-2   md:pt-12 lg:ml-28 ">
+                <Header />
+                <div className="relative font-playfair pt-36  ">
+                    {/*hero section */}      <div className='lg:flex'>
 
-                        <p className="font-bold font-playfair   ml-10 md:text-6xl text-4xl text-[#FFA500] pt-10 lg:my-6">
-                            <h2>
-                                Yenat Agelgil <br />
-                            </h2>
-                            <h2 className="mt-2 md:mt-5">
+                        <div className="md:mx-20 mx-2   md:pt-12 lg:ml-28 ">
 
-                                We Deliver the Food We Crave to Eat!!!
-                            </h2>
-                        </p>
+                            <div className="font-bold font-playfair   ml-10 md:text-6xl text-4xl text-[#FFA500] pt-10 lg:my-6">
+                                <p>
+                                    Yenat Agelgil <br />
+                                </p>
+                                <p className="mt-2 md:mt-5">
 
-                        <p className=" text-center  md:text-3xl text-[#00A65E] text-2xl pt-20">
-                            Savor Irresistible Flavors, Delivered to Your Doorstep, with a Commitment to Quality and Cleanliness
-
-                        </p>
-                        <div className="align-center justify-center flex mt-5">
-
-                            <a href="https://t.me/agelgelfoods" className="p-5 mb-8  duration-500 ease-in-out  rounded-3xl text-white  text-3xl  font-semibold  bg-red-600  ">
-                                Order Now
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className=" h-[400px] lg:h-[700px]" style={{ backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${img1blured})` }}>
-                        <img src={img1} className="xl:pr-10  w-screen h-full lg:mt-0" alt="yinebeb character" />
-
-                    </div>
-
-                </div>
-
-                <div className="bg-gray-200 mt-16 md:mt-72">
-
-
-
-
-                    <div id="services" className="pt-10 md:pt-16 ">
-
-                        <p className="text-center mt-16 py-10  text-4xl md:text-6xl font-semibold sm:text-4xl xl:pt-16">Discover Our Services</p>
-                        <div className="flex justify-center ">
-
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 xl:gap-2 xl:mt-5 xl:grid-cols-4   ">
-
-                                <ServiceCard bluredimg={img1blured} title="YETSOM & YEFESEK AGELGIL " description="A delightful selection of Yetsom and Yefesek Agelgil, flavors that nourish both your body and soul." img={img1} />
-                                <ServiceCard bluredimg={img4blured} title=" DORO PACKAGE " description="Experience a full Doro Package that takes you on a flavorful journey through tradition and taste." img={img4} />
-                                <ServiceCard bluredimg={img5blured} title="Difo Dabo " description="Each bite of our freshly baked bread brings a symphony of flavors and textures to your palate." img={img5} />
-                                <ServiceCard bluredimg={img6blured} title=" Kitfo Keneteketayochu " description="A complete Kitfo package that's designed to delight your senses." img={img6} />
-
-
-
+                                    We Deliver the Food We Crave to Eat!!!
+                                </p>
                             </div>
 
-                        </div>
-                    </div>
+                            <p className=" text-center  md:text-3xl text-[#00A65E] text-2xl pt-20">
+                                Savor Irresistible Flavors, Delivered to Your Doorstep, with a Commitment to Quality and Cleanliness
 
-                    <div className=" md:mt-72  md:pt-48  px-3 lg:grid lg:grid-flow-row-dense    lg:grid-cols-2 lg:gap-12 lg:items-center">
-
-
-                        <div className="lg:col-start-2 pt-72 md:pl-20">
-                            <h4 className="text-4xl font-extrabold ">
-                                Why Yenat Agelgil Stands Out
-                            </h4>
-                            <ul className="mt-10">
-                                <li>
-                                    <Features title="Fast and Free Delivery" description="Enjoy the convenience of swift and complimentary delivery, not just in Addis Ababa but also in Debrezeyt." icon={<FaMotorcycle size={60} />} />
-                                    <Features title="Quality and Cleanliness" description=" Our commitment to cleanliness guarantees you savor only the freshest and most hygienic meals." icon={<FaUtensils size={60} />} />
-                                    <Features title="Customizable Orders" description="Tailor your orders to your preferences. We offer customization options to make your dining experience truly yours." icon={<FaClipboardList size={60} />} />
-                                    <Features title="Homemade with Love" description="Our dishes are prepared with care and passion, just like they would be in your home kitchen. You'll taste the love in every bite." icon={<FaHeart size={60} />} />
-                                </li>
-
-
-                            </ul>
-                        </div>
-                        <div className=" object-cover h-52 mb-5 lg:h-60 sm:h-96 " style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${img2blured})` }}>
-
-                            <img src={img2} alt="Yefesek Agelgil" loading="lazy" className=" mt-16 lg:mt-0   rounded shadow-lg" />
-                        </div>
-                    </div>
-
-
-                    <div id="aboutus" className=" pt-40 md:pt-72 lg:pt-96 lg:pb-96  px-3 lg:grid lg:grid-flow-row-dense    lg:grid-cols-2 lg:gap-12 lg:items-center">
-
-
-
-
-
-
-                        <div className="lg:col-start-1 md:pl-20">
-                            <h4 className="text-4xl font-extrabold ">
-                                Who We Are?
-                            </h4>
-                            <p className="text-xl sm:text-2xl font-semibold pt-5">
-
-                                Enat Agelgil is more than just a food delivery service. Our story began with a passion for sharing the flavors and traditions of Ethiopian food.
                             </p>
-                            <ul className="mt-10">
-                                <li>
-                                    <Features title="Our Mission" description="Our mission is to bring the rich, diverse tastes of Ethiopian cuisine to your doorstep, ensuring every bite celebrates culture and authenticity. " icon={<FaFlag size={60} />} />
-                                    <Features title="Our Values" description="We value authenticity, quality, and the joy of a delicious meal. We're committed to using the finest ingredients and maintaining cleanliness " icon={<FaCheck size={60} />} />
-                                    <Features title="Our Experience" description="With years of experience, our dish tells a story. We celebrate diversity through food, ensuring every meal is a memorable experience." icon={<FaLightbulb size={60} />} />
-                                </li>
+                            <div className="align-center justify-center flex mt-5">
 
-
-                            </ul>
+                                <a href="https://t.me/agelgelfoods" className="p-5 mb-8  duration-500 ease-in-out  rounded-3xl text-white  text-3xl  font-semibold  bg-red-600  ">
+                                    Order Now
+                                </a>
+                            </div>
                         </div>
-                        <div className=" lg:-mt-72 object-cover h-52 mb-5   " style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${img3blured})` }}>
 
-                            <img src={img3} alt="Yefesek Agelgil" loading="lazy" className=" mt-16 lg:mt-0   rounded shadow-lg" />
+                        <div className=" h-[400px] lg:h-[700px]" style={{ backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${img1blured})` }}>
+                            <img src={img1} className="xl:pr-10  w-screen h-full lg:mt-0" alt="yinebeb character" />
+
                         </div>
+
                     </div>
 
+                    <div className="bg-gray-200 mt-16 md:mt-72">
+
+
+
+
+                        <div id="services" className="pt-10 md:pt-16 ">
+
+                            <p className="text-center mt-16 py-10  text-4xl md:text-6xl font-semibold sm:text-4xl xl:pt-16">Discover Our Services</p>
+                            <div className="flex justify-center ">
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 xl:gap-2 xl:mt-5 xl:grid-cols-4   ">
+
+                                    <ServiceCard bluredimg={img1blured} title="YETSOM & YEFESEK AGELGIL " description="A delightful selection of Yetsom and Yefesek Agelgil, flavors that nourish both your body and soul." img={img1} />
+                                    <ServiceCard bluredimg={img4blured} title=" DORO PACKAGE " description="Experience a full Doro Package that takes you on a flavorful journey through tradition and taste." img={img4} />
+                                    <ServiceCard bluredimg={img5blured} title="Difo Dabo " description="Each bite of our freshly baked bread brings a symphony of flavors and textures to your palate." img={img5} />
+                                    <ServiceCard bluredimg={img6blured} title=" Kitfo Keneteketayochu " description="A complete Kitfo package that's designed to delight your senses." img={img6} />
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div className=" md:mt-72  md:pt-48  px-3 lg:grid lg:grid-flow-row-dense    lg:grid-cols-2 lg:gap-12 lg:items-center">
+
+
+                            <div className="lg:col-start-2 pt-72 md:pl-20">
+                                <h4 className="text-4xl font-extrabold ">
+                                    Why Yenat Agelgil Stands Out
+                                </h4>
+                                <ul className="mt-10 ">
+                                    <li>
+                                        <Features title="Fast and Free Delivery" description="Enjoy the convenience of swift and complimentary delivery, not just in Addis Ababa but also in Debrezeyt." icon={<FaMotorcycle size={60} />} />
+                                        <Features title="Quality and Cleanliness" description=" Our commitment to cleanliness guarantees you savor only the freshest and most hygienic meals." icon={<FaUtensils size={60} />} />
+                                        <Features title="Customizable Orders" description="Tailor your orders to your preferences. We offer customization options to make your dining experience truly yours." icon={<FaClipboardList size={60} />} />
+                                        <Features title="Homemade with Love" description="Our dishes are prepared with care and passion, just like they would be in your home kitchen. You'll taste the love in every bite." icon={<FaHeart size={60} />} />
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div className=" object-cover h-52 mb-5 lg:h-60 sm:h-96 " style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${img2blured})` }}>
+
+                                <img src={img2} alt="Yefesek Agelgil" loading="lazy" className=" mt-16 lg:mt-0   rounded shadow-lg" />
+                            </div>
+                        </div>
+
+
+                        <div id="aboutus" className=" pt-40 md:pt-72 lg:pt-96 lg:pb-96  px-3 lg:grid lg:grid-flow-row-dense    lg:grid-cols-2 lg:gap-12 lg:items-center">
 
 
 
 
 
-                    <div className="pt-40">
 
-                        <ContactUs />
+                            <div className="lg:col-start-1 md:pl-20">
+                                <h4 className="text-4xl font-extrabold ">
+                                    Who We Are?
+                                </h4>
+                                <p className="text-xl sm:text-2xl font-semibold pt-5">
+
+                                    Enat Agelgil is more than just a food delivery service. Our story began with a passion for sharing the flavors and traditions of Ethiopian food.
+                                </p>
+                                <ul className="mt-10">
+                                    <li>
+                                        <Features title="Our Mission" description="Our mission is to bring the rich, diverse tastes of Ethiopian cuisine to your doorstep, ensuring every bite celebrates culture and authenticity. " icon={<FaFlag size={60} />} />
+                                        <Features title="Our Values" description="We value authenticity, quality, and the joy of a delicious meal. We're committed to using the finest ingredients and maintaining cleanliness " icon={<FaCheck size={60} />} />
+                                        <Features title="Our Experience" description="With years of experience, our dish tells a story. We celebrate diversity through food, ensuring every meal is a memorable experience." icon={<FaLightbulb size={60} />} />
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                            <div className=" lg:-mt-72 object-cover h-52 mb-5  hidden lg:block " style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${img3blured})` }}>
+
+                                <img src={img3} alt="Yefesek Agelgil" loading="lazy" className=" mt-16 lg:mt-0 hidden lg:block  rounded shadow-lg" />
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <div className="pt-40">
+
+                            <ContactUs />
+                        </div>
+
                     </div>
-
                 </div>
             </div>
             <Footer />
