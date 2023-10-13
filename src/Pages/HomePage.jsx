@@ -110,7 +110,7 @@ const HomePage = () => {
                         </button>
                         <ul className={`sm:flex text-2xl sm:text-xl md:text-2xl sm:items-center xl:mr-48  bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-7 transition-all duration-200 ease-in ${openNavMenu ? "top-16" : "top-[-300px]"} `}>
 
-                            <li className=" md:mx-2 pt-5    ">
+                            <li className=" md:mx-2 pt-5 sm:pt-0    ">
                                 <a href="#home" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1] hover:text-[#FFA500] " >
                                     Home
                                 </a>
