@@ -1,9 +1,16 @@
 import img1 from "../Images/agelgil1.png";
+import img1blured from "../Images/agelgilblured.png";
+
 import img2 from "../Images/yefsk.png";
+import img2blured from "../Images/yefskblured.png";
 import img3 from "../Images/2.png";
+import img3blured from "../Images/2blured.png";
 import img4 from "../Images/arusto.jpg"
+import img4blured from "../Images/arustoblured.png"
 import img5 from "../Images/dabo.jpg"
+import img5blured from "../Images/daboblured.png"
 import img6 from "../Images/kitfo.png"
+import img6blured from "../Images/kitfoblured.png"
 
 import { FaEnvelope, FaPhone, FaMapMarker, FaMotorcycle, FaUtensils, FaClipboardList, FaHeart, FaFlag, FaCheck, FaLightbulb, FaTelegram } from "react-icons/fa"
 import Footer from "../Components/Footer";
@@ -23,7 +30,10 @@ const HomePage = () => {
         return (
 
             <div className=" shadow-lg shadow-black rounded-2xl bg-[#FFA500] flex flex-col items-center  m-5 w-fit p-4">
-                <img src={props.img} className="w-60 h-60" />
+                <div className="w-60 h-60" style={{ backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${props.bluredimg})` }}>
+
+                    <img src={props.img} loading="lazy" className="w-60 h-60" />
+                </div>
                 <h1 className="text-2xl md:text-3xl py-3 xl:text-4xl text-center font-semibold">{props.title}</h1>
                 <h1 className="md:text-3xl text-xl text-center "> {props.description}</h1>
                 <div className="flex justify-center">
@@ -77,9 +87,9 @@ const HomePage = () => {
 
         return (
             <>
-                <div className="fixed font-playfair  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-16 md:h-28 md:flex  ">
-                    <div className=" py-0 bg-black  md:py-0 md:px-1 ">
-                        <p className="text-[#FFA500] xl:ml-60 font-playfair  sm:pt-5 pt-4  hover:font-serif text-3xl ml-5 md:text-4xl ">
+                <div className="fixed font-playfair  pb-5  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-16 md:h-28 md:flex  ">
+                    <div className=" pt-3 md:pt-5 sm:pt-7 bg-black   md:py-0 md:px-1 ">
+                        <p className="text-[#FFA500] xl:ml-60 font-playfair   mb-5   hover:font-serif text-2xl ml-5  ">
                             <a href="/" >
                                 ENAT AGELGIL
                             </a>
@@ -96,26 +106,26 @@ const HomePage = () => {
                             }}
                             className="sm:hidden"
                         >
-                            {openNavMenu ? <TfiClose className="absolute text-2xl  cursor-pointer right-5 top-5 sm:hidden" /> : <GiHamburgerMenu className="absolute text-3xl cursor-pointer right-5 top-5 lg:hidden" />}
+                            {openNavMenu ? <TfiClose className="absolute text-2xl  cursor-pointer right-5 top-3 sm:hidden" /> : <GiHamburgerMenu className="absolute text-3xl cursor-pointer right-5 top-3 lg:hidden" />}
                         </button>
-                        <ul className={`sm:flex sm:items-center xl:mr-48 pt-5 bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-9 transition-all duration-200 ease-in ${openNavMenu ? "top-20" : "top-[-300px]"} `}>
+                        <ul className={`sm:flex text-2xl sm:text-xl md:text-2xl sm:items-center xl:mr-48  bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-7 transition-all duration-200 ease-in ${openNavMenu ? "top-16" : "top-[-300px]"} `}>
 
-                            <li className=" md:mx-2 my-5 md:my-5  text-2xl  ">
+                            <li className=" md:mx-2     ">
                                 <a href="/" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Home
                                 </a>
                             </li>
-                            <li className=" md:mx-2 my-5 md:my-5  text-2xl  ">
+                            <li className=" md:mx-2     ">
                                 <a href="#services" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Services
                                 </a>
                             </li>
-                            <li className=" md:mx-2 my-5 md:my-5  text-2xl  ">
+                            <li className=" md:mx-2    ">
                                 <a href="#aboutus" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     About Us
                                 </a>
                             </li>
-                            <li className=" md:mx-2 my-5 md:my-5  text-2xl  ">
+                            <li className=" md:mx-2    ">
                                 <a href="#contactus" className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Contact Us
                                 </a>
@@ -206,7 +216,7 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div >
+                    <div className=" h-[400px] lg:h-[700px]" style={{ backgroundSize: 'cover', backgroundPosition: 'center', backgroundImage: `url(${img1blured})` }}>
                         <img src={img1} className="xl:pr-10  w-screen h-full lg:mt-0" alt="yinebeb character" />
 
                     </div>
@@ -225,10 +235,10 @@ const HomePage = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-10 xl:gap-2 xl:mt-5 xl:grid-cols-4   ">
 
-                                <ServiceCard title="YETSOM & YEFESEK AGELGIL " description="A delightful selection of Yetsom and Yefesek Agelgil, flavors that nourish both your body and soul." img={img1} />
-                                <ServiceCard title=" DORO PACKAGE " description="Experience a full Doro Package that takes you on a flavorful journey through tradition and taste." img={img4} />
-                                <ServiceCard title="Difo Dabo " description="Each bite of our freshly baked bread brings a symphony of flavors and textures to your palate." img={img5} />
-                                <ServiceCard title=" Kitfo Keneteketayochu " description="A complete Kitfo package that's designed to delight your senses." img={img6} />
+                                <ServiceCard bluredimg={img1blured} title="YETSOM & YEFESEK AGELGIL " description="A delightful selection of Yetsom and Yefesek Agelgil, flavors that nourish both your body and soul." img={img1} />
+                                <ServiceCard bluredimg={img4blured} title=" DORO PACKAGE " description="Experience a full Doro Package that takes you on a flavorful journey through tradition and taste." img={img4} />
+                                <ServiceCard bluredimg={img5blured} title="Difo Dabo " description="Each bite of our freshly baked bread brings a symphony of flavors and textures to your palate." img={img5} />
+                                <ServiceCard bluredimg={img6blured} title=" Kitfo Keneteketayochu " description="A complete Kitfo package that's designed to delight your senses." img={img6} />
 
 
 
@@ -237,10 +247,10 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="mt-16 md:mt-72 pt-20 md:pt-48  px-3 lg:grid lg:grid-flow-row-dense    lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    <div className=" md:mt-72  md:pt-48  px-3 lg:grid lg:grid-flow-row-dense    lg:grid-cols-2 lg:gap-12 lg:items-center">
 
 
-                        <div className="lg:col-start-2 md:pl-20">
+                        <div className="lg:col-start-2 pt-72 md:pl-20">
                             <h4 className="text-4xl font-extrabold ">
                                 Why Yenat Agelgil Stands Out
                             </h4>
@@ -255,7 +265,10 @@ const HomePage = () => {
 
                             </ul>
                         </div>
-                        <img src={img2} alt="Yefesek Agelgil" className=" mt-16 lg:mt-0    rounded shadow-lg" />
+                        <div className=" object-cover h-52 mb-5 lg:h-60 sm:h-96 " style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${img2blured})` }}>
+
+                            <img src={img2} alt="Yefesek Agelgil" loading="lazy" className=" mt-16 lg:mt-0   rounded shadow-lg" />
+                        </div>
                     </div>
 
 
@@ -284,7 +297,10 @@ const HomePage = () => {
 
                             </ul>
                         </div>
-                        <img src={img3} alt="Yefesek Agelgil" className="lg:col-start-2 mt-16 lg:mt-0    rounded shadow-lg" />
+                        <div className=" lg:-mt-72 object-cover h-52 mb-5   " style={{ backgroundSize: "cover", backgroundPosition: "center", backgroundImage: `url(${img3blured})` }}>
+
+                            <img src={img3} alt="Yefesek Agelgil" loading="lazy" className=" mt-16 lg:mt-0   rounded shadow-lg" />
+                        </div>
                     </div>
 
 
@@ -292,7 +308,7 @@ const HomePage = () => {
 
 
 
-                    <div className="">
+                    <div className="pt-40">
 
                         <ContactUs />
                     </div>
