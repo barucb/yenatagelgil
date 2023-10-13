@@ -89,7 +89,7 @@ const HomePage = () => {
             <>
                 <div ref={menuClick} className="fixed font-playfair  pb-5  top-0 left-0 z-50 items-center justify-between w-full   text-white bg-black sm:flex h-16 md:h-28 md:flex  ">
                     <div className=" pt-3 md:pt-5 sm:pt-7 bg-black   md:py-0 md:px-1 ">
-                        <p className="text-[#FFA500] xl:ml-60 font-playfair   mb-5   hover:font-serif text-2xl ml-5  ">
+                        <p className="text-[#FFA500] xl:ml-60 font-playfair  sm:pt-1 mb-5 md:pt-5  hover:font-serif text-2xl lg:text-3xl ml-5  ">
                             <a href="/" >
                                 ENAT AGELGIL
                             </a>
@@ -108,24 +108,24 @@ const HomePage = () => {
                         >
                             {openNavMenu ? <TfiClose className="absolute text-2xl  cursor-pointer right-5 top-3 sm:hidden" /> : <GiHamburgerMenu className="absolute text-3xl cursor-pointer right-5 top-3 lg:hidden" />}
                         </button>
-                        <ul className={`sm:flex text-2xl sm:text-xl md:text-2xl sm:items-center xl:mr-48  bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-7 transition-all duration-200 ease-in ${openNavMenu ? "top-16" : "top-[-300px]"} `}>
+                        <ul className={`sm:flex  text-2xl sm:text-xl md:text-2xl sm:items-center xl:mr-48  bg-black sm:static     absolute sm:z-auto z-[-1] left-0 w-full  sm:pl-0 pl-7 transition-all duration-200 ease-in ${openNavMenu ? "top-16" : "top-[-300px]"} `}>
 
-                            <li className=" md:mx-2 pt-5 sm:pt-0    ">
+                            <li className=" md:mx-2 pt-4    ">
                                 <a href="#home" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1] hover:text-[#FFA500] " >
                                     Home
                                 </a>
                             </li>
-                            <li className=" md:mx-2     ">
+                            <li className=" md:mx-2  pt-4   ">
                                 <a href="#services" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Services
                                 </a>
                             </li>
-                            <li className=" md:mx-2    ">
+                            <li className=" md:mx-2  pt-4 ">
                                 <a href="#aboutus" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     About Us
                                 </a>
                             </li>
-                            <li className=" md:mx-2    ">
+                            <li className=" md:mx-2   sm:pb-0 pt-4 pb-8 pr-1 ">
                                 <a href="#contactus" onClick={() => setOpenNavMenu(false)} className="font-semibold pl-8  text-[#FFF5E1]  hover:text-[#FFA500]" >
                                     Contact Us
                                 </a>
